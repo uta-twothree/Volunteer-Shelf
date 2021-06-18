@@ -198,6 +198,29 @@ a:hover {
   margin: 20px 0px;
   padding: 0.5vh 3vw;
 }
+
+/* ユーザー情報編集ページ*/
+.user-update-main {
+  width: 100%;
+  min-width: 800px;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+}
+.user-update-btn {
+  width: 50%;
+  margin: 0 auto;
+}
+.user-update-red-btn {
+  width: 100%;
+  background: #ea352d;
+  border: 1px solid #ea352d;
+  color: #fff;
+  line-height: 48px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
 /* フッター　*/
 footer {
   margin: 30px auto;
