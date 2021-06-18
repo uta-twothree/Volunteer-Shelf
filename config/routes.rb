@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: "albums#index"
-  resources :users, only: :show
+  resources :users, only: [:show, :edit, :update]
   resources :albums, only: [:index]
 end
