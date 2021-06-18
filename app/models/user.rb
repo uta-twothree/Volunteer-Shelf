@@ -1,12 +1,12 @@
 class User < ApplicationRecord
-  extend ActiveHash::Associations::ActiveRecordExtensions
-  belongs_to :area_id
-  belongs_to :theme_id
-
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+
+  extend ActiveHash::Associations::ActiveRecordExtensions
+  belongs_to :area
+  belongs_to :theme
 
   with_options presence: true do
     validates :nickname
