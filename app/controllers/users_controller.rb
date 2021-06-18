@@ -7,5 +7,16 @@ class UsersController < ApplicationController
   end
 
   def update
+    if current_user.update(user_params)
+      redirect_to action: :show
+    else
+      render :edit
+    end
+  end
+
+  private
+
+  def user_params
+    params.require(:user).permit(:nickname, :email, :area_id, :theme_id, :self_introduction)
   end
 end
