@@ -1,5 +1,9 @@
 class AlbumsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create]
+  def index
+    @albums = Album.all.order('created_at DESC')
+  end
+
   def new
     @album = Album.new
   end
