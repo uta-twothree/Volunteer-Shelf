@@ -1,4 +1,5 @@
 class AlbumsController < ApplicationController
+  before_action :authenticate_user!, only: [:new, :create]
   def new
     @album = Album.new
   end
