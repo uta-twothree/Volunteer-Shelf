@@ -1,6 +1,6 @@
 <%= form_with(model: @album, local: true) do |form| %>
   <%= form.text_field :name, placeholder: "アルバム名" %>
-  <%= form.text_area :content, placeholder: "活動内容を記入して下さい", rows: "10" %>
+  <%= form.text_area :content, placeholder: "活動内容を記入して下さい。", rows: "10" %>
   <div class="form-group">
     <div class='form-text-wrap'>
       <label class="form-text">主な活動エリア</label>
