@@ -8,6 +8,9 @@ class User < ApplicationRecord
   belongs_to :area
   belongs_to :theme
 
+  has_many :album_users
+  has_many :albums, through: :album_users
+
   with_options presence: true do
     validates :nickname
     validates :birthday
