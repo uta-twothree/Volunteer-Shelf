@@ -10,24 +10,25 @@ header.header {
   z-index: 5;
   height: 40px;
 }
-header.header div.header__bar.row {
+header.header div.head__bar {
   position: relative;
 }
-header.header div.header__bar.row h1.grid-6 {
+header.header div.head__bar h1.grid-6 {
   font-size: 20px;
   float: left;
 }
-header.header div.header__bar.row h1.grid-6 a {
+header.header div.head__bar h1.grid-6 a {
   display: block;
 }
-header.header div.header__bar.row div.grid-6 {
+header.header div.head__bar div.grid-6 {
   float: right;
   text-align: right;
 }
-header.header div.header__bar.row div.grid-6 a.post {
+header.header div.head__bar div.grid-6 a.post {
   width: 120px;
   display: inline-left;
   margin-left: 10px;
+  margin-right: 15px;
 }
 header.header .user_nav {
   position: relative;
@@ -35,10 +36,11 @@ header.header .user_nav {
   right: 0;
 }
 header.header .user_nav span {
-  top: 5px;
+  top: 10px;
   display: block;
   float: left;
   margin-left: 30px;
+  margin-right: 20px;
   width: 150px;
   height: 50px;
   font-size: 1em;
@@ -73,7 +75,7 @@ header.header .user_nav ul li a {
   border-bottom: 1px solid #d8d8d8;
 }
 .btn,
-header.header div.header__bar.row div.grid-6 a.post {
+header.header div.head__bar div.grid-6 a.post {
   padding: 8px 20px;
   font-size: 14px;
   border: 2px solid #57C3E9;
@@ -84,7 +86,7 @@ header.header div.header__bar.row div.grid-6 a.post {
   display: inline-block;
 }
 .btn:hover,
-header.header div.header__bar.row div.grid-6 a.post:hover {
+header.header div.head__bar div.grid-6 a.post:hover {
   border-color: #9bdbf2;
   color: #9bdbf2;
 }
@@ -124,6 +126,7 @@ body {
 a {
   text-decoration: none;
   color: #666;
+  margin-left: 15px;
 }
 a:hover {
   color: #57C3E9;
