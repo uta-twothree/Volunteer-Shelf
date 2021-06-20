@@ -7,8 +7,8 @@
   max-width: 660px;
   *zoom: 1;
 }
-form input,
-form textarea {
+.album-name,
+.album-content {
   width: 100%;
   margin: 5px 0 15px;
   padding: 10px;
@@ -16,7 +16,17 @@ form textarea {
   border-radius: 5px;
   font-family: "游ゴシック", "YuGothic";
 }
-form input[type="submit"] {
+.image-content {
+  width: 75%;
+  height: 100%;
+}
+.submit-btn {
+  width: 100%;
+  margin: 5px 0 15px;
+  padding: 10px;
+  border: 1px solid #D8D8D8;
+  border-radius: 5px;
+  font-family: "游ゴシック", "YuGothic";
   margin-top: 45px;
   background-color: #57C3E9;
   border-radius: 20px;
@@ -24,7 +34,7 @@ form input[type="submit"] {
   border: 0;
   font-size: 18px;
 }
-form input[type="submit"]:hover {
+.submit-btn:hover {
   background-color: #84d3ef;
 }
 .container {
