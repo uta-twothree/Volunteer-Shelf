@@ -5,6 +5,7 @@ class Album < ApplicationRecord
 
   has_many :users, through: :album_users
   has_many :album_users
+  has_one_attached :image
 
   with_options presence: true do
     validates :name
