@@ -7,7 +7,7 @@ RSpec.describe Album, type: :model do
 
   describe '作成するアルバムの登録' do
     context 'アルバムを登録できるとき' do
-      it 'nameとcontent、areaとthemeが存在すれば登録できる' do
+      it 'nameとcontent、image,areaとthemeが存在すれば登録できる' do
         expect(@album).to be_valid
       end
     end
@@ -23,6 +23,12 @@ RSpec.describe Album, type: :model do
         @album.content = ''
         @album.valid?
         expect(@album.errors.full_messages).to include("Content can't be blank")
+      end
+
+      it 'imageが空では登録できない' do
+        @album.image = nil
+        @album.valid?
+        expect(@album.errors.full_messages).to include("Image can't be blank")
       end
 
       it 'areaが空では登録できない' do
