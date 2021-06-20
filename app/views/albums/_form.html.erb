@@ -1,6 +1,7 @@
 <%= form_with(model: @album, local: true) do |form| %>
-  <%= form.text_field :name, placeholder: "アルバム名" %>
-  <%= form.text_area :content, placeholder: "活動内容を記入して下さい。", rows: "10" %>
+  <%= form.text_field :name, placeholder: "アルバム名", class:"album-name" %>
+  <%= form.text_area :content, placeholder: "活動内容を記入して下さい。", rows: "10", class:"album-content" %>
+  <%= form.file_field :image, class:"album-image" %>
   <div class="form-group">
     <div class='form-text-wrap'>
       <label class="form-text">主な活動エリア</label>
@@ -13,5 +14,5 @@
     </div>
     <%= form.collection_select(:theme_id, Theme.all, :id, :name, {}, {class:"select-box", id:"theme-category"}) %>
   </div>
-  <%= form.submit "作成する" %>
+  <%= form.submit "作成する", class:"submit-btn" %>
 <% end %>
