@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', function(){
       const blobImage = document.createElement('img');
       blobImage.setAttribute('src', blob);
       blobImage.setAttribute('class', 'image-content')
-
       imageElement.appendChild(blobImage);
       ImageList.appendChild(imageElement);
     };
