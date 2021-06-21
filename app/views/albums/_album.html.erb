@@ -1,4 +1,4 @@
-<div class="content_post" style="#">
+<div class="content_post" style="background-image: url(<%= url_for(album.image) if album.image.attached? %>);">
   <p class="album_name"><%= album.name %></p>
   <p class="album_content"><%= album.content %></p>
   <ul class="name">
