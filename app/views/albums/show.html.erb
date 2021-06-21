@@ -1,0 +1,36 @@
+<div class="album-show">
+  <div class="album-box">
+    <h2 class="name">
+      <%= @album.name %>
+    </h2>
+    <div class="album-img-content">
+      <%= image_tag @album.image, class:"image" %>
+    </div>
+    <% if user_signed_in? %>
+      <% if current_user.id == @album.user_id %>
+        <%= link_to "アルバムの編集", "#", method: :get, class: "album-blue-btn" %>
+        <p class="or-text">or</p>
+        <%= link_to "削除", "#", method: :delete, class:"album-destroy" %>
+      <% end %> 
+    <% end %>
+    <table class="detail-table">
+      <tbody>
+        <tr>
+          <th class="detail-album">主な活動エリア</th>
+          <td class="detail-value"><%= @album.area.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-album">活動テーマ</th>
+          <td class="detail-value"><%= @album.theme.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-album-content">活動内容</th>
+          <td class="detail-value-content"><%= @album.content %></td>
+        </tr>
+      </tbody>
+    </table>
+    <% if user_signed_in? %>
+      <%= link_to "アルバムに参加する", "#", method: :get, class: "album-join-btn" %>
+    <% end %>
+  </div>
+</div>
