@@ -44,7 +44,7 @@ class AlbumsController < ApplicationController
   end
 
   def move_to_index
-    unless current_user.id == @album.album_user_ids
+    unless current_user.id == @album.user_id
       redirect_to action: :index
     end
   end
