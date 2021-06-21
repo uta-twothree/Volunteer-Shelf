@@ -8,7 +8,7 @@
     </div>
     <% if user_signed_in? %>
       <% if current_user.id == @album.user_id %>
-        <%= link_to "アルバムの編集", "#", method: :get, class: "album-blue-btn" %>
+        <%= link_to "アルバムの編集", edit_album_path(@album.id), method: :get, class: "album-blue-btn" %>
         <p class="or-text">or</p>
         <%= link_to "削除", "#", method: :delete, class:"album-destroy" %>
       <% end %> 
