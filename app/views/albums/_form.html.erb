@@ -16,5 +16,5 @@
     </div>
     <%= form.collection_select(:theme_id, Theme.all, :id, :name, {}, {class:"select-box", id:"theme-category"}) %>
   </div>
-  <%= form.submit "作成する", class:"submit-btn" %>
+  <%= form.submit "保存する", class:"submit-btn" %>
 <% end %>
