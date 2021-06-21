@@ -1,5 +1,7 @@
 class AlbumsController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create, :show]
+  before_action :authenticate_user!, only: [:new, :create, :show, :edit, :update]
+  before_action :find_album, only: [:show, :edit, :update]
+  before_action :move_to_index, only: [:edit, :update]
   def index
     @albums = Album.all.order('created_at DESC')
   end
@@ -18,12 +20,32 @@ class AlbumsController < ApplicationController
   end
 
   def show
-    @album = Album.find(params[:id])
+  end
+
+  def edit
+  end
+
+  def update
+    if @album.update(album_params)
+      redirect_to action: :show
+    else
+      render :edit
+    end
   end
 
   private
 
   def album_params
     params.require(:album).permit(:name, :content, :area_id, :theme_id, :image).merge(user_id: current_user.id)
+  end
+
+  def find_album
+    @album = Album.find(params[:id])
+  end
+
+  def move_to_index
+    unless current_user.id == @album.user_id
+      redirect_to action: :index
+    end
   end
 end
