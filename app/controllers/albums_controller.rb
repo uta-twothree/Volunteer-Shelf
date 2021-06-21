@@ -1,5 +1,5 @@
 class AlbumsController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create]
+  before_action :authenticate_user!, only: [:new, :create, :show]
   def index
     @albums = Album.all.order('created_at DESC')
   end
@@ -15,6 +15,10 @@ class AlbumsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def show
+    @album = Album.find(params[:id])
   end
 
   private
