@@ -5,8 +5,8 @@ class Memory < ApplicationRecord
 
   with_options presence: true do
     validates :title
-    validates :text
     validates :date
     validates :images
+    validates :text
   end
 end
