@@ -1,0 +1,7 @@
+<div class="contents row">
+  <div class="container">
+    <h3>メモリー投稿</h3>
+    <%= render partial: 'shared/error_messages', locals: {model: @memory } %>
+    <%= render partial: "post", locals: { memory: @memory } %>
+  </div>
+</div>
