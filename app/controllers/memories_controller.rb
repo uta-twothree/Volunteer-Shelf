@@ -1,13 +1,15 @@
 class MemoriesController < ApplicationController
+  before_action :authenticate_user!, only: [:new, :create]
   def new
     @album = Album.find(params[:album_id])
     @memory = Memory.new
   end
 
   def create
+    @album = Album.find(params[:album_id])
     @memory = Memory.new(memory_params)
     if @memory.save
-      redirect_to "albums/show"
+      redirect_to album_path(@album.id)
     else
       render :new
     end
