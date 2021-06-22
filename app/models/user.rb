@@ -10,6 +10,7 @@ class User < ApplicationRecord
 
   has_many :album_users
   has_many :albums, through: :album_users
+  has_many :memories
 
   with_options presence: true do
     validates :nickname
