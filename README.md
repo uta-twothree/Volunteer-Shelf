@@ -48,11 +48,13 @@
 
 ## memories テーブル
 
-| Column   | Type   | Options     |
-| -------- | -------| ----------- |
-| title    | string | null: false |
-| text     | text   | null: false |
-| date     | date   | null: false |
+| Column   | Type       | Options                        |
+| -------- | ---------- | ------------------------------ |
+| title    | string     | null: false                    |
+| text     | text       | null: false                    |
+| date     | date       | null: false                    |
+| user     | references | null: false, foreign_key: true |
+| album    | references | null: false, foreign_key: true |
 
 ### Association
 

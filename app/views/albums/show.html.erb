@@ -10,7 +10,7 @@
       <% if current_user.id == @album.user_id %>
         <%= link_to "アルバムの編集", edit_album_path(@album.id), method: :get, class: "album-blue-btn" %>
         <p class="or-text">or</p>
-        <%= link_to "削除", "#", method: :delete, class:"album-destroy" %>
+        <%= link_to "メモリー投稿", new_album_memory_path(@album.id), method: :get, class:"album-destroy" %>
       <% end %> 
     <% end %>
     <table class="detail-table">
