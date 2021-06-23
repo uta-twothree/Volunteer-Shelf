@@ -3,6 +3,6 @@ Rails.application.routes.draw do
   root to: "albums#index"
   resources :users, only: [:show, :edit, :update]
   resources :albums, only: [:index, :new, :create, :show, :edit, :update] do
-    resources :memories, only: [:index, :new, :create, :show]
+    resources :memories, only: [:index, :new, :create, :show, :edit, :update]
   end
 end
