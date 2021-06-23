@@ -15,6 +15,9 @@ class MemoriesController < ApplicationController
     end
   end
 
+  def show
+  end
+
   private
 
   def memory_params
