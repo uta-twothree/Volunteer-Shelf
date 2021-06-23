@@ -38,7 +38,7 @@
         <ul class='memory-lists'>
           <% @memories.each do |memory| %>
             <li class='list'>
-              <%= link_to "#" do %>
+              <%= link_to album_memory_path(@album.id, memory.id) do %>
               <div class='memory-img-content'>
                 <%= image_tag memory.images[0], class:'memories' %>
               </div>

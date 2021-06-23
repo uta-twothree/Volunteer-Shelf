@@ -1,0 +1,40 @@
+<div class="main">
+  <div class="memory-inner">
+    <div class="memory-wrapper">
+      <h2 class="memory-page-heading">
+        <%= "#{@album.name}に投稿されたメモリーの情報"%>
+      </h2>
+      <table class="table">
+        <tbody>
+          <tr>
+            <th class="table__col1">活動日付</th>
+            <td class="table__col2"><%= @memory.date %></td>
+          </tr>
+          <tr>
+            <th class="table__col1">タイトル</th>
+            <td class="table__col2"><%= @memory.title %></td>
+          </tr>
+          <tr>
+            <th class="table__col3">活動報告</th>
+            <td class="table__col4"><%= @memory.text %></td>
+          </tr>
+        </tbody>
+      </table>
+      <h2 class="memory-page-heading">
+      <%= "#{@album.name}に投稿されたメモリーの写真一覧"%>
+        <div class="memory-img-content">
+          <% @memory.images.each do |image| %>
+            <%= image_tag image, class:'images' %>
+          <% end %>
+        </div>
+      </h2>
+      <%# if user_signed_in? && current_user.id %>
+        <div class="memory-btn-box">
+          <%= link_to "編集", "#", method: :get, class: "memory-blue-btn" %>
+          <p class="memory-or-text">or</p>
+          <%= link_to "削除", "#", method: :delete, class:"memory-destroy-red-btn" %>
+        </div>
+      <%# end %>
+    </div>
+  </div>
+</div>
