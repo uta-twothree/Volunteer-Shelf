@@ -31,6 +31,30 @@
     </table>
     <% if user_signed_in? %>
       <%= link_to "アルバムに参加する", "#", method: :get, class: "album-join-btn" %>
+      <div class='memory-contents'>
+        <div class="main-title" >
+        新規投稿メモリー
+        </div>
+        <ul class='memory-lists'>
+          <% @memories.each do |memory| %>
+            <li class='list'>
+              <%= link_to "#" do %>
+              <div class='memory-img-content'>
+                <%= image_tag memory.images[0], class:'memories' %>
+              </div>
+              <div class='memory-info'>
+                <h3 class='memory-date'>
+                  <%= memory.date %>
+                </h3>
+                <h3 class='memory-title'>
+                  <%= memory.title %>
+                </h3>
+              </div>
+              <% end %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
     <% end %>
   </div>
 </div>
