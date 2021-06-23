@@ -1,5 +1,4 @@
-/* 商品の概要 */
-
+/* アルバムの概要 */
 .album-show {
   background-color: #f8f8f8;
   width: 100vw;
@@ -8,7 +7,6 @@
   align-items: center;
   padding: 5vh 0;
 }
-
 .album-box {
   background-color: #FFF;
   width: 70vw;
@@ -18,14 +16,12 @@
   flex-direction: column;
   align-items: center;
 }
-
 .album-box>.name {
   text-align: center;
   font-weight: bold;
   font-size: 25px;
   margin-bottom: 25px;
 }
-
 .album-box-img {
   height: 50vh;
   width: 60vw;
@@ -33,18 +29,15 @@
   background-color: rgb(205, 202, 202);
   object-fit: contain;
 }
-
 .album-img-content {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
 }
-
 .image {
   width: 50%;
   height: 50%;
 }
-
 .album-blue-btn {
   text-align: center;
   background-color: #57C3E9;
@@ -54,11 +47,9 @@
   margin: 30px 0px 5px;
   padding: 2vh 5vw;
 }
-
 .or-text {
   font-size: 20px;
 }
-
 .album-destroy {
   background-color: lightgray;
   text-align: center;
@@ -67,19 +58,16 @@
   margin: 5px ;
   padding: 2vh 5vw;
 }
-
 .album-explain-box {
   font-size: 18px;
   margin: 40px 0px;
   overflow-wrap: anywhere;
 }
-
 .detail-table {
   margin-bottom: 30px;
   margin-top: 30px;
   width: 50%;
 }
-
 .detail-album {
   width: 25%;
   background-color: #eee;
@@ -87,14 +75,12 @@
   font-size: 14px;
   text-align: center;
 }
-
 .detail-value {
   width: 60%;
   padding: 20px;
   border: 1px solid #dedede;
   font-size: 14px;
 }
-
 .detail-album-content {
   width: 25%;
   height: 150px;
@@ -103,7 +89,6 @@
   font-size: 14px;
   text-align: center;
 }
-
 .detail-value-content {
   width: 60%;
   height: 150px;
@@ -111,7 +96,6 @@
   border: 1px solid #dedede;
   font-size: 14px;
 }
-
 .album-join-btn {
   text-align: center;
   background-color: orange;
@@ -120,4 +104,53 @@
   color: #FFF;
   margin: 25px 0px 5px;
   padding: 2vh 5vw;
+}
+
+/* メモリー一覧　*/
+.memory-contents {
+  background-color: #FFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10vh 0;
+}
+.memory-contents>.main-title {
+  font-size: 3vh;
+  margin: 1vh 0;
+  text-decoration: none;
+  color: #3ccace;
+  font-weight: bold;
+}
+.memory-lists {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.memory-lists>.list {
+  width: 37vh;
+  padding: 1vw;
+  background-color: #FFF;
+}
+.memory-img-content {
+  position: relative;
+}
+.memory-img {
+  width: 33vh;
+  height: 33vh;
+}
+.memories {
+  width: 100%;
+  height: 1000%;
+}
+.memory-info {
+  background-color: #FFF;
+  color: black;
+  padding: 1vw;
+}
+.memory-title {
+  font-size: 2.5vh;
+}
+.memory-date {
+  font-size: 1.5vh;
 }
