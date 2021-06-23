@@ -1,9 +1,5 @@
 class MemoriesController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create]
-  def index
-    @memories = Memory.all.order('created_at DESC')
-  end
-
   def new
     @album = Album.find(params[:album_id])
     @memory = Memory.new

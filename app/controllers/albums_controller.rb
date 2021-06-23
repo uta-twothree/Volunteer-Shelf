@@ -1,5 +1,5 @@
 class AlbumsController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create, :show, :edit, :update]
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update]
   before_action :find_album, only: [:show, :edit, :update]
   before_action :move_to_index, only: [:edit, :update]
   def index
@@ -20,6 +20,7 @@ class AlbumsController < ApplicationController
   end
 
   def show
+    @memories = @album.memories.all.order('created_at DESC')
   end
 
   def edit
