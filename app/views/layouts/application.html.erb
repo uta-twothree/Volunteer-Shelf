@@ -15,7 +15,7 @@
         <h1 class="grid-6"><a href="/">VolunteerApp</a></h1>
         <% if user_signed_in? %>
           <div class="user_nav grid-6">
-            <span><%= current_user.nickname %>
+            <span><%= current_user.group_name %>
               <ul class="user__info">
                 <li>
                   <%= link_to "マイページ", user_path(current_user.id) %>
