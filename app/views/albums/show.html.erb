@@ -31,6 +31,7 @@
     </table>
     <% if user_signed_in? %>
       <%= link_to "アルバムに参加する", "#", method: :get, class: "album-join-btn" %>
+      <% if current_user.id == @album.user_id %>
       <div class='memory-contents'>
         <div class="main-title" >
         新規投稿メモリー
@@ -55,6 +56,7 @@
           <% end %>
         </ul>
       </div>
+      <% end %>
     <% end %>
   </div>
 </div>
