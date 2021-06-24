@@ -2,29 +2,25 @@
   <div class="inner">
     <div class="user__wrapper">
       <h2 class="page-heading">
-        <%= "#{@user.nickname}さんの情報"%>
+        <%= "#{@user.group_name}さんの情報"%>
       </h2>
       <table class="table">
         <tbody>
           <tr>
-            <th class="table__col1">ニックネーム</th>
-            <td class="table__col2"><%= @user.nickname %></td>
-          </tr>
-          <tr>
-            <th class="table__col1">生年月日</th>
-            <td class="table__col2"><%= @user.birthday %></td>
+            <th class="table__col1">グループネーム</th>
+            <td class="table__col2"><%= @user.group_name %></td>
           </tr>
           <tr>
             <th class="table__col1">活動エリア</th>
             <td class="table__col2"><%= @user.area.name %></td>
           </tr>
           <tr>
-            <th class="table__col1">興味のあるテーマ</th>
+            <th class="table__col1">主な活動テーマ</th>
             <td class="table__col2"><%= @user.theme.name %></td>
           </tr>
           <tr>
-            <th class="table__col3">自己紹介文</th>
-            <td class="table__col4"><%= @user.self_introduction %></td>
+            <th class="table__col3">グループ紹介文</th>
+            <td class="table__col4"><%= @user.group_introduction %></td>
           </tr>
         </tbody>
       </table>
@@ -32,7 +28,21 @@
         <%= link_to "編集", edit_user_path(current_user.id), method: :get, class: "user-blue-btn" %>
       <% end %>
       <h2 class="page-heading">
-        <%= "#{@user.nickname}さんの参加アルバム"%>
+        <%= "#{@user.group_name}さんのアルバム"%>
+        <ul class="album-info-lists">
+            <% @albums.each do |album| %>
+              <li class='list'>
+                <div class="group-album-img">
+                  <%= image_tag album.image, class:'group-album-image' %>
+                </div>
+                <div class='group-album-info'>
+                  <h3 class='group-album-name'>
+                    <%= album.name %>
+                  </h3>
+                </div>
+              </li>
+            <% end %>
+        </ul>
       </h2>
     </div>
   </div>
