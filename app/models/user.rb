@@ -8,13 +8,11 @@ class User < ApplicationRecord
   belongs_to :area
   belongs_to :theme
 
-  has_many :album_users
-  has_many :albums, through: :album_users
+  has_many :albums
   has_many :memories
 
   with_options presence: true do
-    validates :nickname
-    validates :birthday
+    validates :group_name
     with_options numericality: { other_than: 1, message: "can't be blank" } do
       validates :area_id
       validates :theme_id
