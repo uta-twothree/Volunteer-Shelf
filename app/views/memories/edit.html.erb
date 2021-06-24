@@ -1,0 +1,32 @@
+<div class="contents row">
+  <div class="container">
+    <h3>メモリー更新</h3>
+    <%= render partial: 'shared/error_messages', locals: {model: @memory } %>
+    <%= form_with model: [@album, @memory], url: album_memory_path(params[:album_id]), method: :patch, local: true do |form| %>
+      <%= form.text_field :title, placeholder: "メモリー名", class:"memory-name" %>
+      <div class="memory-group">
+        <div class='memory-text-wrap'>
+          <label class="memory-text">投稿日付</label>
+        </div>
+        <div class='memory-date'>
+          <%= raw sprintf(
+                      form.date_select(
+                        :date,
+                        class:'select-birth',
+                        id:"birth-date",
+                        use_month_numbers: true,
+                        prompt:'--',
+                        start_year: 2000,
+                        end_year: (Time.now.year),
+                        date_separator: '%s'),
+                      "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
+        </div>
+      </div>
+      <%= form.text_area :text, placeholder: "メモリーを記入して下さい。", rows: "10", class:"memory-content" %>
+      <p class="form-text">メモリー画像</p>
+      <%= form.file_field :images, name: 'memory[images][]', id:"memory-image" %>
+      <div id="image-lists"></div>
+      <%= form.submit "保存する", class:"submit-btn" %>
+    <% end %>
+  </div>
+</div>
