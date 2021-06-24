@@ -4,18 +4,16 @@
 
 | Column             | Type    | Options                   |
 | ------------------ | ------- | ------------------------- |
-| nickname           | string  | null: false               |
+| group_name         | string  | null: false               |
 | email              | string  | null: false, unique: true |
 | encrypted_password | string  | null: false               |
 | area_id            | integer | null: false               |
 | theme_id           | integer | null: false               |
-| birthday           | date    | null: false               |
-| self_introduction  | text    |                           |
+| group_introduction | text    |                           |
 
 ### Association
 
-- has_many :album_users
-- has_many :albums, through: :album_users
+- has_many :albums
 - has_many :memories
 
 ## albums テーブル
@@ -30,21 +28,8 @@
 
 ### Association
 
-- has_many :album_users
-- has_many :users, through: :album_users
-- has_many :memories
-
-## album_users テーブル
-
-| Column   | Type       | Options                        |
-| -------- | ---------- | ------------------------------ |
-| user     | references | null: false, foreign_key: true |
-| album    | references | null: false, foreign_key: true |
-
-### Association
-
-- belongs_to :album
 - belongs_to :user
+- has_many   :memories
 
 ## memories テーブル
 
