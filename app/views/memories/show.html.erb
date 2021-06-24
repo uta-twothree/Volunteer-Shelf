@@ -28,13 +28,13 @@
           <% end %>
         </div>
       </h2>
-      <%# if user_signed_in? && current_user.id %>
+      <% if user_signed_in? && current_user.id == @memory.user_id %>
         <div class="memory-btn-box">
           <%= link_to "編集", edit_album_memory_path(@album.id, @memory.id), method: :get, class: "memory-blue-btn" %>
           <p class="memory-or-text">or</p>
-          <%= link_to "削除", "#", method: :delete, class:"memory-destroy-red-btn" %>
+          <%= link_to "削除", album_memory_path(@album.id, @memory.id), method: :delete, class:"memory-destroy-red-btn" %>
         </div>
-      <%# end %>
+      <% end %>
     </div>
   </div>
 </div>
