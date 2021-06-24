@@ -1,8 +1,8 @@
 class MemoriesController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create, :show, :edit, :update]
-  before_action :set_album, only: [:new, :create, :show, :edit, :update]
-  before_action :find_memory, only: [:show, :edit, :update]
-  before_action :move_to_album_show, only: [:show, :edit, :update]
+  before_action :authenticate_user!, only: [:new, :create, :show, :edit, :update, :destroy]
+  before_action :set_album, only: [:new, :create, :show, :edit, :update, :destroy]
+  before_action :find_memory, only: [:show, :edit, :update, :destroy]
+  before_action :move_to_album_show, only: [:show, :edit, :update, :destroy]
   def new
     @memory = Memory.new
   end
@@ -31,6 +31,8 @@ class MemoriesController < ApplicationController
   end
 
   def destroy
+    @memory.destroy
+    redirect_to album_path(@album.id)
   end
 
   private
