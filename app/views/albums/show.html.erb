@@ -34,7 +34,6 @@
       </tbody>
     </table>
     <% if user_signed_in? %>
-      <% if current_user.id == @album.user_id %>
       <div class='memory-contents'>
         <div class="main-title" >
         新規投稿メモリー一覧
@@ -59,7 +58,6 @@
           <% end %>
         </ul>
       </div>
-      <% end %>
     <% end %>
   </div>
 </div>
