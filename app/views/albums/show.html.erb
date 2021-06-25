@@ -16,6 +16,10 @@
     <table class="detail-table">
       <tbody>
         <tr>
+          <th class="detail-album">グループ名</th>
+          <td class="detail-value"><%= @album.user.group_name %></td>
+        </tr>
+        <tr>
           <th class="detail-album">主な活動エリア</th>
           <td class="detail-value"><%= @album.area.name %></td>
         </tr>
@@ -30,11 +34,10 @@
       </tbody>
     </table>
     <% if user_signed_in? %>
-      <%= link_to "アルバムに参加する", "#", method: :get, class: "album-join-btn" %>
       <% if current_user.id == @album.user_id %>
       <div class='memory-contents'>
         <div class="main-title" >
-        新規投稿メモリー
+        新規投稿メモリー一覧
         </div>
         <ul class='memory-lists'>
           <% @memories.each do |memory| %>
