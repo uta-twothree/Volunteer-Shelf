@@ -3,8 +3,7 @@ class Album < ApplicationRecord
   belongs_to :area
   belongs_to :theme
 
-  has_many :users, through: :album_users
-  has_many :album_users
+  belongs_to :user
   has_one_attached :image
   has_many :memories
 
