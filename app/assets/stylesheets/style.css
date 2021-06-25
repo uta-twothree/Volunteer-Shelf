@@ -58,11 +58,13 @@ header.header .user_nav span:hover ul {
 header.header .user_nav ul {
   display: none;
   position: absolute;
-  top: 46px;
+  top: 36px;
   right: 0;
   border-left: 1px solid #d8d8d8;
   border-right: 1px solid #d8d8d8;
   box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  padding: 0px;
 }
 header.header .user_nav ul li {
   background-color: #f0f0f0;
