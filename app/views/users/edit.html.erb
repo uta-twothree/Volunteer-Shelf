@@ -8,10 +8,10 @@
   <%= render partial: 'shared/error_messages', locals: {model: f.object} %>
   <div class="form-group">
     <div class='form-text-wrap'>
-      <label class="form-text">ニックネーム</label>
+      <label class="form-text">グループネーム</label>
       <span class="indispensable">必須</span>
     </div>
-    <%= f.text_area :nickname, class:"input-default", id:"nickname", placeholder:"例) 山田太郎", maxlength:"40" %>
+    <%= f.text_area :group_name, class:"input-default", id:"nickname", placeholder:"例) 山田太郎", maxlength:"40" %>
   </div>
   <div class="form-group">
     <div class='form-text-wrap'>
@@ -29,17 +29,17 @@
   </div>
   <div class="form-group">
     <div class='form-text-wrap'>
-      <label class="form-text">興味のあるテーマ</label>
+      <label class="form-text">主な活動テーマ</label>
       <span class="indispensable">必須</span>
     </div>
     <%= f.collection_select(:theme_id, Theme.all, :id, :name, {}, {class:"select-box", id:"theme-category"}) %>
   </div>
   <div class="form-group">
     <div class='form-text-wrap'>
-      <label class="form-text">自己紹介文</label>
+      <label class="form-text">グループ紹介文</label>
       <span class="indispensable">任意</span>
     </div>
-    <%= f.text_area :self_introduction, class:"input-introduction", id:"self-introduction", placeholder:"あなたのことを知ってもらいましょう！" %>
+    <%= f.text_area :group_introduction, class:"input-introduction", id:"self-introduction", placeholder:"あなたのことを知ってもらいましょう！" %>
   </div>
   <div class='user-update-btn'>
     <%= f.submit "更新する" ,class:"user-update-red-btn" %>

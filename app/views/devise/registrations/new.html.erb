@@ -8,10 +8,10 @@
   <%= render partial: 'shared/error_messages', locals: {model: f.object} %>
   <div class="form-group">
     <div class='form-text-wrap'>
-      <label class="form-text">ニックネーム</label>
+      <label class="form-text">グループネーム</label>
       <span class="indispensable">必須</span>
     </div>
-    <%= f.text_area :nickname, class:"input-default", id:"nickname", placeholder:"例) 山田太郎", maxlength:"40" %>
+    <%= f.text_area :group_name, class:"input-default", id:"nickname", placeholder:"例) ○○グループ", maxlength:"40" %>
   </div>
   <div class="form-group">
     <div class='form-text-wrap'>
@@ -37,25 +37,6 @@
   </div>
   <div class="form-group">
     <div class='form-text-wrap'>
-      <label class="form-text">生年月日</label>
-      <span class="indispensable">必須</span>
-    </div>
-    <div class='input-birth-wrap'>
-      <%= raw sprintf(
-                  f.date_select(
-                    :birthday,
-                    class:'select-birth',
-                    id:"birth-date",
-                    use_month_numbers: true,
-                    prompt:'--',
-                    start_year: 1930,
-                    end_year: (Time.now.year - 5),
-                    date_separator: '%s'),
-                  "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
-    </div>
-  </div>
-  <div class="form-group">
-    <div class='form-text-wrap'>
       <label class="form-text">主な活動エリア</label>
       <span class="indispensable">必須</span>
     </div>
@@ -63,17 +44,17 @@
   </div>
   <div class="form-group">
     <div class='form-text-wrap'>
-      <label class="form-text">興味のあるテーマ</label>
+      <label class="form-text">主な活動テーマ</label>
       <span class="indispensable">必須</span>
     </div>
     <%= f.collection_select(:theme_id, Theme.all, :id, :name, {}, {class:"select-box", id:"theme-category"}) %>
   </div>
   <div class="form-group">
     <div class='form-text-wrap'>
-      <label class="form-text">自己紹介文</label>
+      <label class="form-text">グループ紹介文</label>
       <span class="indispensable">任意</span>
     </div>
-    <%= f.text_area :self_introduction, class:"input-introduction", id:"self-introduction", placeholder:"あなたのことを知ってもらいましょう！" %>
+    <%= f.text_area :group_introduction, class:"input-introduction", id:"self-introduction", placeholder:"グループについて知ってもらいましょう！" %>
   </div>
   <div class='register-btn'>
     <%= f.submit "会員登録" ,class:"register-red-btn" %>
