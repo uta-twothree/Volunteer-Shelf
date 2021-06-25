@@ -7,7 +7,7 @@ RSpec.describe User, type: :model do
 
   describe 'ユーザー新規登録' do
     context '新規登録できるとき' do
-      it 'nicknameとemail、passwordとpassword_confirmation、areaとthemeとbirthdayが存在すれば登録できる' do
+      it 'group_nameとemail、passwordとpassword_confirmation、areaとthemeが存在すれば登録できる' do
         expect(@user).to be_valid
       end
 
@@ -17,17 +17,17 @@ RSpec.describe User, type: :model do
         expect(@user).to be_valid
       end
 
-      it 'self_introductionは空でも保存できること' do
-        @user.self_introduction = ''
+      it 'group_introductionは空でも保存できること' do
+        @user.group_introduction = ''
         expect(@user).to be_valid
       end
     end
 
     context '新規登録できないとき' do
-      it 'nicknameが空では登録できない' do
-        @user.nickname = ''
+      it 'group_nameが空では登録できない' do
+        @user.group_name = ''
         @user.valid?
-        expect(@user.errors.full_messages).to include("Nickname can't be blank")
+        expect(@user.errors.full_messages).to include("Group name can't be blank")
       end
 
       it 'emailが空では登録できない' do
@@ -113,12 +113,6 @@ RSpec.describe User, type: :model do
         @user.theme_id = 1
         @user.valid?
         expect(@user.errors.full_messages).to include("Theme can't be blank")
-      end
-
-      it 'birthdayが空では登録できない' do
-        @user.birthday = ''
-        @user.valid?
-        expect(@user.errors.full_messages).to include("Birthday can't be blank")
       end
     end
   end
