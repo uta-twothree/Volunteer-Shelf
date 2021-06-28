@@ -5,6 +5,7 @@ class CommentsController < ApplicationController
       redirect_to album_path(@comment.album)
     else
       @album = @comment.album
+      @memories = @album.memories.all.order('created_at DESC')
       @comments =  @album.comments
       render "albums/show"
     end
