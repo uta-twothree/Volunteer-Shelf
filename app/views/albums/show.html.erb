@@ -74,6 +74,7 @@
             <li class="comments_list">
               <%= comment.text %>
               <%= link_to "by #{comment.user.group_name}", "/users/#{comment.user_id}", class: :comment_user %>
+              <div class="comment_time"><%= comment.created_at.strftime('%Y/%m/%d %H:%M') %></div>
             </li>
           <% end %>
         </ul>
