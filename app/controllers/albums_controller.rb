@@ -22,7 +22,7 @@ class AlbumsController < ApplicationController
   def show
     @memories = @album.memories.all.order('created_at DESC')
     @comment = Comment.new
-    @comments = @album.comments.includes(:user)
+    @comments = @album.comments.includes(:user).order('created_at DESC')
   end
 
   def edit

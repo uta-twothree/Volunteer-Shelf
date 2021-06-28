@@ -58,6 +58,26 @@
           <% end %>
         </ul>
       </div>
+      <div class="album_comments">
+        <%= form_with model: [@album, @comment], local: true do |f| %>
+          <div class="comment_field">
+            <%= f.label :text, "コメント" %><br />
+            <%= f.text_field :text, id:"comment_text" %>
+          </div>
+          <div class="actions">
+            <%= f.submit "送信する", class: :comment_btn  %>
+          </div>
+        <% end %> 
+        <p class="comments_lists_name">コメント一覧</p>
+        <ul class="comments_lists">
+          <% @comments.each do |comment| %>
+            <li class="comments_list">
+              <%= comment.text %>
+              <%= link_to "by #{comment.user.group_name}", "/users/#{comment.user_id}", class: :comment_user %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
     <% end %>
   </div>
 </div>

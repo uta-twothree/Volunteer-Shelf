@@ -154,3 +154,53 @@
 .memory-date {
   font-size: 1.5vh;
 }
+
+/* コメント投稿欄　*/
+.album_comments{
+  background-color: #f6f6f6;
+  padding: 20px;
+  margin: 28px 0 40px 0;
+  width: 50%;
+}
+.comments_lists_name {
+  font-size: 18px;
+}
+.comments_lists{
+  padding-left: 20px;
+}
+.comments_list{
+  list-style-type: square;
+  padding-bottom: 5px;
+  font-size: 15px;
+}
+.comment_user{
+  font-size: 12px;
+  color: #999;
+  text-decoration: underline;
+}
+.comment_text {
+  width: 50%;
+}
+.comment_field{
+  margin: 10px 0;
+}
+.actions{
+  margin-bottom: 40px;
+}
+.comment_btn{
+  display: inline-block;
+  padding: 0.4em 1.6em;
+  font-size: 0.8em;
+  color: #fff;
+  text-decoration: none;
+  user-select: none;
+  background: #87CEFA;
+  border: 1px #87CEFA solid;
+  border-radius: 3px;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 2px 0 rgba(0, 0, 0, 0.12);
+  transition: 0.2s ease;
+}
+.comment_btn:hover {
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+}
