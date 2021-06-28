@@ -62,7 +62,7 @@
         <%= form_with model: [@album, @comment], local: true do |f| %>
           <div class="comment_field">
             <%= f.label :text, "コメント" %><br />
-            <%= f.text_field :text, id:"comment_text" %>
+            <%= f.text_area :text, placeholder: "コメントを書いてみましょう！", rows: "10", class: :comment_text_form %>
           </div>
           <div class="actions">
             <%= f.submit "送信する", class: :comment_btn  %>
@@ -73,7 +73,7 @@
           <% @comments.each do |comment| %>
             <li class="comments_list">
               <%= comment.text %>
-              <%= link_to "by #{comment.user.group_name}", "/users/#{comment.user_id}", class: :comment_user %>
+              <div class="comment_user"><%= link_to "by #{comment.user.group_name}", "/users/#{comment.user_id}" %></div>
               <div class="comment_time"><%= comment.created_at.strftime('%Y/%m/%d %H:%M') %></div>
             </li>
           <% end %>
