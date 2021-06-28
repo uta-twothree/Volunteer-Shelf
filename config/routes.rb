@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   resources :users, only: [:show, :edit, :update]
   resources :albums, only: [:index, :new, :create, :show, :edit, :update] do
     resources :memories
+    resources :comments, only: :create
   end
 end
