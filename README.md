@@ -15,6 +15,7 @@
 
 - has_many :albums
 - has_many :memories
+- has_many :comments
 
 ## albums テーブル
 
@@ -30,6 +31,7 @@
 
 - belongs_to :user
 - has_many   :memories
+- has_many   :comments
 
 ## memories テーブル
 
@@ -38,6 +40,19 @@
 | title    | string     | null: false                    |
 | text     | text       | null: false                    |
 | date     | date       | null: false                    |
+| user     | references | null: false, foreign_key: true |
+| album    | references | null: false, foreign_key: true |
+
+### Association
+
+- belongs_to :user
+- belongs_to :album
+
+## comments テーブル
+
+| Column   | Type       | Options                        |
+| -------- | ---------- | ------------------------------ |
+| text     | text       | null: false                    |
 | user     | references | null: false, foreign_key: true |
 | album    | references | null: false, foreign_key: true |
 

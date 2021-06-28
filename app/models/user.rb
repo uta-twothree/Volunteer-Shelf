@@ -10,6 +10,7 @@ class User < ApplicationRecord
 
   has_many :albums
   has_many :memories
+  has_many :comments
 
   with_options presence: true do
     validates :group_name
