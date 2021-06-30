@@ -38,7 +38,7 @@
   width: 50%;
   height: 50%;
 }
-.album-blue-btn {
+.album-green-btn {
   text-align: center;
   background-color: #a6ce39;
   font-size: 18px;
@@ -47,8 +47,9 @@
   margin: 30px 0px 5px;
   padding: 2vh 5vw;
 }
-.or-text {
-  font-size: 20px;
+.album-green-btn:hover {
+  background-color: #B0DB3D;
+  color: #FFF;
 }
 .memory_input {
   background-color: #a6ce39;
@@ -58,6 +59,10 @@
   color: #FFF;
   margin: 5px ;
   padding: 2vh 5vw;
+}
+.memory_input:hover {
+  background-color: #B0DB3D;
+  color: #FFF;
 }
 .album-explain-box {
   font-size: 18px;

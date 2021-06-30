@@ -136,10 +136,8 @@ a:hover {
 
 /* ユーザーページ */
 .inner {
-  width: 100VW;
-  margin: 0 auto;
-  background-color: #f8f8f8;
-  padding: 0px 40px;
+  width: 1200px;
+  padding-left: 80px;
 }
 .page-heading {
   font-size: 20px;
@@ -199,7 +197,7 @@ a:hover {
 }
 .user-blue-btn {
   text-align: center;
-  background-color: #4699ca;
+  background-color: #a6ce39;
   font-size: 16px;
   font-weight: bold;
   color: white;
