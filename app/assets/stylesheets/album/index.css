@@ -1,7 +1,23 @@
+.list_pict {
+  width: 100%;
+  height: 100%;
+}
+
+.top_page_title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 25px;
+  background-color: #FFF;
+  margin: 0px;
+  padding-top: 20px;
+}
+
 .albums_lists {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  background-color: #FFF;
+  padding-bottom: 25px;
 }
 
 div.content_post {
@@ -46,7 +62,7 @@ div.content_post {
   z-index: 2;
   font-weight: bold;
   text-shadow: 0 0 2px #000, 0 0 1px #000, 0 0 1px #000;
-  color: lightblue;
+  color: #fff;
 }
 
 .album_content {
@@ -54,13 +70,16 @@ div.content_post {
   position: relative;
   left: 5px;
   right: 100px;
-  top: 220px;
+  top: 230px;
   margin: 0;
-  font-size: 20px;
+  font-size: 14px;
   z-index: 2;
   font-weight: bold;
   text-shadow: 0 0 2px #000, 0 0 1px #000, 0 0 1px #000;
-  color: lightblue;
+  color: #fff;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 ul.name {
@@ -68,11 +87,25 @@ ul.name {
   top: 10px;
   right: 30px;
   z-index: 2;
-  font-size: 13px;
+  font-size: 12px;
   display: block;
-  color: lightblue;
+  color: #fff;
+  text-shadow: 0 0 2px #000, 0 0 1px #000, 0 0 1px #000;
 }
 
 li {
   list-style-type: none;
+}
+
+.page-top {
+  display: block;
+  font-weight: bold;
+  padding: 50px 0px;
+  text-align: center;
+  background: #fff;
+  color: #666;
+  transition: .3s;
+  margin-left: 0px;
+  text-decoration: underline;
+  font-size: 16px;
 }

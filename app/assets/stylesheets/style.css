@@ -19,6 +19,7 @@ header.header div.head__bar h1.grid-6 {
 }
 header.header div.head__bar h1.grid-6 a {
   display: block;
+  color: #99BF7E;
 }
 header.header div.head__bar div.grid-6 {
   float: right;
@@ -52,7 +53,7 @@ header.header .user_nav span:after {
   margin-left: -4px;
 }
 header.header .user_nav span:hover ul {
-  color: #57C3E9;
+  color: #99BF7E;
   display: block;
 }
 header.header .user_nav ul {
@@ -79,8 +80,8 @@ header.header .user_nav ul li a {
 header.header div.head__bar div.grid-6 a.post {
   padding: 8px 20px;
   font-size: 14px;
-  border: 2px solid #57C3E9;
-  color: #57C3E9;
+  border: 2px solid #99BF7E;
+  color: #99BF7E;
   font-weight: bold;
   text-align: center;
   border-radius: 3px;
@@ -88,8 +89,8 @@ header.header div.head__bar div.grid-6 a.post {
 }
 .btn:hover,
 header.header div.head__bar div.grid-6 a.post:hover {
-  border-color: #9bdbf2;
-  color: #9bdbf2;
+  border-color: #99BF7E;
+  color: #28a44a;
 }
 .title {
   font-weight: bold;
