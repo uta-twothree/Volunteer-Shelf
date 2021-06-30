@@ -9,7 +9,7 @@
 }
 .album-box {
   background-color: #FFF;
-  width: 70vw;
+  width: 100vw;
   padding: 20px;
   min-width: 1200px;
   display: flex;
@@ -40,7 +40,7 @@
 }
 .album-blue-btn {
   text-align: center;
-  background-color: #57C3E9;
+  background-color: #a6ce39;
   font-size: 18px;
   font-weight: bold;
   color: #FFF;
@@ -50,11 +50,12 @@
 .or-text {
   font-size: 20px;
 }
-.album-destroy {
-  background-color: lightgray;
+.memory_input {
+  background-color: #a6ce39;
   text-align: center;
   font-size: 18px;
-  color: black;
+  font-weight: bold;
+  color: #FFF;
   margin: 5px ;
   padding: 2vh 5vw;
 }
@@ -96,15 +97,6 @@
   border: 1px solid #dedede;
   font-size: 14px;
 }
-.album-join-btn {
-  text-align: center;
-  background-color: orange;
-  font-size: 18px;
-  font-weight: bold;
-  color: #FFF;
-  margin: 25px 0px 5px;
-  padding: 2vh 5vw;
-}
 
 /* メモリー一覧　*/
 .memory-contents {
@@ -118,7 +110,7 @@
   font-size: 3vh;
   margin: 1vh 0;
   text-decoration: none;
-  color: #3ccace;
+  color: #a6ce39;
   font-weight: bold;
 }
 .memory-lists {
@@ -201,8 +193,8 @@
   color: #fff;
   text-decoration: none;
   user-select: none;
-  background: #87CEFA;
-  border: 1px #87CEFA solid;
+  background: #a6ce39;
+  border: 1px #a6ce39 solid;
   border-radius: 3px;
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 2px 0 rgba(0, 0, 0, 0.12);
   transition: 0.2s ease;
