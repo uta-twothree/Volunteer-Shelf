@@ -8,9 +8,7 @@
     </div>
     <% if user_signed_in? %>
       <% if current_user.id == @album.user_id %>
-        <%= link_to "アルバムの編集", edit_album_path(@album.id), method: :get, class: "album-blue-btn" %>
-        <p class="or-text">or</p>
-        <%= link_to "メモリー投稿", new_album_memory_path(@album.id), method: :get, class:"album-destroy" %>
+        <%= link_to "アルバムの編集", edit_album_path(@album.id), method: :get, class: "album-green-btn" %>
       <% end %> 
     <% end %>
     <table class="detail-table">
@@ -34,6 +32,9 @@
       </tbody>
     </table>
     <% if user_signed_in? %>
+      <% if current_user.id == @album.user_id %>
+        <%= link_to "メモリー投稿", new_album_memory_path(@album.id), method: :get, class:"memory_input" %>
+      <% end %> 
       <div class='memory-contents'>
         <div class="main-title" >
         新規投稿メモリー一覧

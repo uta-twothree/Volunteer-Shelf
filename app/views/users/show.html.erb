@@ -32,6 +32,7 @@
         <ul class="album-info-lists">
             <% @albums.each do |album| %>
               <li class='list'>
+                <%= link_to album_path(album.id) do %>
                 <div class="group-album-img">
                   <%= image_tag album.image, class:'group-album-image' %>
                 </div>
@@ -40,6 +41,7 @@
                     <%= album.name %>
                   </h3>
                 </div>
+                <% end %>
               </li>
             <% end %>
         </ul>

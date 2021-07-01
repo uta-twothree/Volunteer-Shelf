@@ -1,5 +1,8 @@
+<%= image_tag "backimage_pict", class:"list_pict" %>
+<p class="top_page_title">みんなのアルバム一覧</p>
 <div class="albums_lists">
   <% @albums.each do |album| %>
     <%= render partial: "album", locals: { album: album } %>
   <% end %>
 </div>
+<a href="/" class="page-top">トップへ戻る</a>

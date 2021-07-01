@@ -28,14 +28,14 @@
   border-radius: 5px;
   font-family: "游ゴシック", "YuGothic";
   margin-top: 45px;
-  background-color: #57C3E9;
+  background-color: #a6ce39;
   border-radius: 20px;
   color: #fff;
   border: 0;
   font-size: 18px;
 }
 .submit-btn:hover {
-  background-color: #84d3ef;
+  background-color: #a6ce39;
 }
 .container {
   margin: 20px 0;
