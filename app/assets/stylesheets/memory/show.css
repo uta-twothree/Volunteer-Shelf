@@ -88,3 +88,14 @@
   margin: 20px 0px;
   padding: 0.5vh 3vw;
 }
+.page_back_btn {
+  display: block;
+  font-weight: bold;
+  padding: 50px 0px;
+  text-align: center;
+  color: #666;
+  transition: .3s;
+  margin-left: 0px;
+  text-decoration: underline;
+  font-size: 16px;
+}
