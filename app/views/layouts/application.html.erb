@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>VolunteerApp</title>
+    <title>Volunteer Shelf</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -12,7 +12,7 @@
   <body>
     <header class="header">
       <div class="head__bar">
-        <h1 class="grid-6"><a href="/">VolunteerApp</a></h1>
+        <h1 class="grid-6"><a href="/">Volunteer Shelf</a></h1>
         <% if user_signed_in? %>
           <div class="user_nav grid-6">
             <span><%= current_user.group_name %>
