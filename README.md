@@ -41,7 +41,7 @@
 
 ### トップページ（アルバム一覧画面）
 
-#### [![Image from Gyazo](https://i.gyazo.com/3ff5edf35b3a7fbeee7f5754d4b6a642.gif)](https://gyazo.com/3ff5edf35b3a7fbeee7f5754d4b6a642)
+#### [![Image from Gyazo](https://i.gyazo.com/df80270c9db6cc857e057014e7e4739f.gif)](https://gyazo.com/df80270c9db6cc857e057014e7e4739f)
 
 - アルバム一覧表示ページはログインに関係なく、誰でも閲覧することができます。
 - 登録されているアルバムが一覧で表示されており、左上から作成された日時が新しい順にアルバムが表示されます。
